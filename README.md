@@ -6,10 +6,10 @@
 👉 [Visit Portfolio](https://khaledada.github.io/My-Portfolio/)
 
 ## 📁 Projects Included
-1. **SmartFactory Lab Project**
-   - Modular robot skills, OPC UA, Python
-2. **Final Year Project**
-   - CODESYS, Python, Modbus TCP, Data Visualization
+1. **TU Kaiserslautern Lab Project**
+   - Modular robot skills, Semscape and Simulinik
+2. **Bachelor's Final Year Project**
+   - CODESYS, Modbus TCP, Data Visualization
 
 ## 💡 Technologies Used
 - HTML & CSS
