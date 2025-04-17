@@ -1,6 +1,6 @@
 # Khaled's Portfolio Website
 
-🚀 Welcome to my personal coding portfolio! This site showcases my skills, background, and two featured projects: my SmartFactory Lab Project and my Final Year Project on Energy Optimization.
+🚀 Welcome to my personal coding portfolio! This site showcases my skills, background, and two featured projects: my TU Kaiserslautern Lab Project and my Final Year Project on Energy Optimization.
 
 ## 🌐 Live Site
 👉 [Visit Portfolio](https://khaledada.github.io/My-Portfolio/)
