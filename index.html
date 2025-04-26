@@ -4,58 +4,136 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Khaled's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f9fafb;
+      color: #1e293b;
+      line-height: 1.6;
     }
     header {
       background: #1f2937;
-      color: #fff;
-      padding: 2rem;
+      color: white;
       text-align: center;
+      padding: 4rem 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    nav {
+      margin-top: 2rem;
     }
     nav a {
+      color: white;
       margin: 0 1rem;
-      color: #fff;
       text-decoration: none;
+      font-weight: 600;
     }
-    .container {
-      padding: 2rem;
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
     }
-    h2 {
+    .section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
       color: #1f2937;
     }
-    .project {
-      background: #fff;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    footer {
-      background: #1f2937;
-      color: #fff;
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
       text-align: center;
-      padding: 1rem;
+      font-size: 1.1rem;
     }
-    a.button {
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+    .project-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .project-card h3 {
+      margin-bottom: 1rem;
+      color: #2563eb;
+    }
+    .project-card p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .button {
       display: inline-block;
       background: #2563eb;
       color: white;
       padding: 0.5rem 1rem;
       text-decoration: none;
       border-radius: 5px;
-      margin-top: 1rem;
+      transition: background 0.3s;
+      font-weight: 600;
+    }
+    .button:hover {
+      background: #1d4ed8;
+    }
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .skills li {
+      background: white;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      font-weight: 600;
+    }
+    footer {
+      background: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: #3b82f6;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Khaled's Coding Portfolio</h1>
+    <h1>Hi, I'm Khaled 👋</h1>
+    <p>Master's Graduate in Electrical Engineering | Automation & Robotics Enthusiast | Solving Industrial Challenges with Code</p>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -64,69 +142,65 @@
     </nav>
   </header>
 
-  <div class="container" id="about">
+  <section class="section about" id="about">
     <h2>About Me</h2>
     <p>
-      I’m Khaled, a Master's student in Electrical Engineering passionate about automation, Industrial Communication and robotics. I enjoy solving real-world problems using Python and industrial software.
+      I am passionate about designing and building efficient automation systems. Experienced with robotics, PLCs, industrial communication, and modern software tools. I thrive on innovation and real-world problem solving.
     </p>
-  </div>
+  </section>
 
-  <div class="container" id="projects">
+  <section class="section" id="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Project Lab "Bin Pick"</h3>
-      <h4>Skills</h4> 
-      <ul>
-        <li>MATLAB scripting, YOLOv4 object detection </li>
-        <li>Waypoint programming, Basic automation logic, Simulation control in Simulinik, Semiscape</li>
-        <li>Variable passing between scripts</li>
-        <li>Integration of camera with MATLAB</li>
-      </ul>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-      <img src="images/bin_pick_project.jpg" alt="Robotic arm" style="max-width: 48%; height: 8px;">
-      <img src="images/bin_pick_model.jpg" alt="Robot Model" style="max-width: 48%; height: 8px;">
-      </div>
-      <p>Implemented modular skill-based robot control using MATLAB and Simulinik. Tested on a real robotic arm through Semiscape simulation. and the hardware connected through Arduino</p>
-      <a href="https://gitlab.rhrk.uni-kl.de/zyj49qax/cas-project-lab/-/blob/main/src/The_1_day_lab/RobotMotion.m?ref_type=heads" class="button">View Robotic Motion MATLAB Code</a>
-      <a href="https://gitlab.rhrk.uni-kl.de/zyj49qax/cas-project-lab/-/blob/main/src/The_1_day_lab/main_model.slx?ref_type=heads" class="button">View Simulinik Model</a>
-    </div>
-    <div class="project">
-      <h3>Bachelor Project: Energy Optimization and Monitoring</h3>
-      <h4>Skills</h4> 
-      <ul>
-        <li>Arduino, Ladder Diagram</li>
-        <li>CODESYS Automation Serve, Cloud Connectivity, Simulinik, Semiscape</li>
-        <li>Data Monitoring and Logging, Modbus TCP</li>
-        <li>Energy Usage Analysis</li>
-      </ul>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-        <img src="images/FYP_HW.jpg" alt="Energy Optimization Project" style="width: 48%; border-radius: 8px;">
-        <img src="images/FYP_SW.png" alt="Energy Optimization Project" style="width: 48%; border-radius: 8px;">
-        </div>
-      <p>Built an energy monitoring and Supervision system using CODESYS and Automation Server. Real-time visualization and reporting included.</p>
-      <a href="https://github.com/Khaledada/Realtime-Control-and-Monitoring-of-Smart-Grid-System/blob/main/FYPMobusFinal/FYPMobusFinal.ino" class="button">View Arduino Code for MODBUS connectivity</a>
-      <a href="https://github.com/Khaledada/Realtime-Control-and-Monitoring-of-Smart-Grid-System/blob/main/SmartGridScadaSystem.project" class="button">View CODESYS Project</a>
-    </div>
-  </div>
+    <div class="projects">
 
-  <div class="container" id="skills">
+      <div class="project-card">
+        <img src="images/bin_pick_project.jpg" alt="Bin Pick Project">
+        <h3>Project Lab "Bin Pick"</h3>
+        <p>Skill-based robot control using MATLAB, Simulink, Arduino, and Semiscape. Tested on real robotic hardware.</p>
+        <a href="https://gitlab.rhrk.uni-kl.de/zyj49qax/cas-project-lab/-/blob/main/src/The_1_day_lab/RobotMotion.m?ref_type=heads" class="button">MATLAB Code</a>
+        <a href="https://gitlab.rhrk.uni-kl.de/zyj49qax/cas-project-lab/-/blob/main/src/The_1_day_lab/main_model.slx?ref_type=heads" class="button" style="margin-left: 0.5rem;">Simulink Model</a>
+      </div>
+
+      <div class="project-card">
+        <img src="images/FYP_HW.jpg" alt="Energy Optimization">
+        <img src="images/FYP_SW.png" alt="Energy Optimization" style="margin-top:10px;">
+        <h3>Final Year Project: Energy Optimization</h3>
+        <p>Developed an energy monitoring and supervision system using CODESYS, Automation Server, and Modbus TCP.</p>
+        <a href="#" class="button">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section skills" id="skills">
     <h2>Skills</h2>
     <ul>
-      <li>C Language, Arduino, MATLAB, Structured Text (ST)</li>
-      <li>CODESYS, MATLAB, Simulinik, Semiscape</li>
-      <li>OPC UA, Modbus TCP</li>
-      <li>Git, VS Code</li>
+      <li>Python</li>
+      <li>MATLAB & Simulink</li>
+      <li>CODESYS</li>
+      <li>Arduino</li>
+      <li>Structured Text (ST)</li>
+      <li>OPC UA</li>
+      <li>Modbus TCP</li>
+      <li>Git & GitLab</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="container" id="contact">
+  <section class="section" id="contact">
     <h2>Contact Me</h2>
-    <p>Email: kh-khalil@hotmail.com</p>
-    <p><a href="https://github.com/khaledada">GitHub</a> | <a href="https://www.linkedin.com/in/khaled-khalil-128041189/">LinkedIn</a></p>
-  </div>
+    <p style="text-align:center; margin-bottom: 1rem;">Feel free to reach out for collaborations or just a friendly chat.</p>
+    <div style="text-align:center;">
+      <a href="mailto:kh-khalil@hotmail.com" class="button">Email Me</a>
+    </div>
+    <div style="text-align:center; margin-top: 1rem;">
+      <a href="https://github.com/khaledada" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/khaled-khalil-128041189/" target="_blank">LinkedIn</a>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Khaled. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
